@@ -12,6 +12,11 @@
 
 @synthesize name;
 
+- (NSUInteger) hash {
+	NSLog(@"%s called", __func__);
+	return [self.name hash];
+}
+
 - (BOOL) isEqual:(id)other {
 	NSLog(@"Testing whether %@ is equal to %@", self, other);
 	NSString *otherName = nil;
