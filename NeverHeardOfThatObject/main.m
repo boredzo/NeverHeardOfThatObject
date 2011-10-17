@@ -21,9 +21,17 @@ int main (int argc, char **argv) {
 		addPersonWithName(@"Barney");
 		addPersonWithName(@"Betty");
 
+		NSLog(@"Searching for Wilma by name...");
+
 		//Person objects respond to isEqual: by comparing name, so this should find the relevant Person.
 		NSUInteger idx = [family indexOfObject:@"Wilma"];
 		NSLog(@"Wilma is at index %@", (idx != NSNotFound) ? [NSNumber numberWithUnsignedInteger:idx] : @"(not found)");
+
+		Person *wilma = [Person new];
+		wilma.name = @"Wilma";
+		NSLog(@"Searching for %@...", wilma);
+		idx = [family indexOfObject:wilma];
+		NSLog(@"Wilma (as a Person) is at index %@", (idx != NSNotFound) ? [NSNumber numberWithUnsignedInteger:idx] : @"(not found)");
 	}
 	return EXIT_SUCCESS;
 }
