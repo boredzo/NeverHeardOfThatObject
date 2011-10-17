@@ -231,6 +231,7 @@
 				31068FCE144C8EEC00015D07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
